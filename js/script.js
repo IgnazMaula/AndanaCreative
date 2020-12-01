@@ -2,7 +2,6 @@ const title = document.querySelector("body");
 const navItem = document.querySelector(".navbar-nav");
 const logo = document.querySelector(".logo");
 
-// title.style.overflow = "hidden";
 
 var mobile = window.matchMedia("(max-width: 575.98px)");
 var tab = window.matchMedia("(max-width: 991.92px)");
@@ -19,7 +18,15 @@ navItem.addEventListener("click", function() {
 
 function mobileViewport(mobile) {
     if (mobile.matches) { // If media query matches
-        logo.setAttribute("src", "images/logo.png")
+        logo.setAttribute("src", "images/logo-title.png")
+        $(".carousel").removeAttr("data-aos", "data-aos-anchor-placement");
+        $(".about").removeAttr("data-aos", "data-aos-anchor-placement");
+        $(".service").removeAttr("data-aos", "data-aos-anchor-placement");
+        $(".portoTitle").removeAttr("data-aos", "data-aos-anchor-placement");
+        $(".card").removeAttr("data-aos", "data-aos-anchor-placement");
+        $(".logo-porto").removeAttr("data-aos", "data-aos-anchor-placement");
+        $(".col-lg-4").removeAttr("data-aos", "data-aos-anchor-placement");
+        $(".col-lg-8").removeAttr("data-aos", "data-aos-anchor-placement");
         return true;
         
     }
@@ -32,16 +39,20 @@ $(window).scroll(function() {
         var mobile = window.matchMedia("(max-width: 575.98px)")
         if(!mobileViewport(mobile)) {
             if(!mobileViewport(tab)) {
-                logo.setAttribute("src", "images/logo-white.png")
+                logo.setAttribute("src", "images/logo-white-2.png")
             }    
         }   
     }
     else {
-        logo.setAttribute("src", "images/logo.png")
+        logo.setAttribute("src", "images/logo-title.png")
+        
     }
     
 })
 
+AOS.init({
+    duration: 1000,
+  })
 
 
 
