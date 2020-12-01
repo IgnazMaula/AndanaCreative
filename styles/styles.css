@@ -407,6 +407,9 @@ p {
     .weare {
         font-size: 65px;
     }
+    .help {
+        margin-left: 0;
+    }
     .word {
         display: none;
     }
@@ -473,6 +476,10 @@ p {
     }
     #whyus h1 {
         font-size: 30px;
+        margin-left: 0;
+    }
+    #whyus img {
+        margin-left: 0;
     }
     #footer {
         padding-top: 15%;
